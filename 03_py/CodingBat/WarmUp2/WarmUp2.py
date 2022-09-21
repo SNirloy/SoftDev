@@ -1,6 +1,15 @@
 def string_times(str, n):
 	#Python has the unique ability to multiply strings, repeating n times
-  return n * str  
+  return n * str
+
+print("Test Cases for StringTimes");
+print("\t" + string_times("HelpMe ", 5))
+print("Checking without eyes");
+strTimesTest = "";
+Message = "What are the three numbers on the back of your credit card"
+for i in range(1200):
+    strTimesTest += Message
+print((string_times(Message, 1200) == strTimesTest))
 
 def front_times(str, n):
 	#First we check for length, because if it has less, we only use the string
@@ -8,7 +17,7 @@ def front_times(str, n):
     return n * str
   else:
     return n * str[:3]
-
+print ("Test Cases for FrontTimes")
 def string_bits(str):
 
   n = 0
