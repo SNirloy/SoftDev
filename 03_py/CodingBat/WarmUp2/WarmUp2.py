@@ -197,7 +197,3 @@ for reps in range(10):
 
 #for i in range(100):
 #    print(random.randrange(10))
-<<<<<<< HEAD
-=======
-
->>>>>>> c3e976aba2eeaba061fb4a90c992f501c9aac306
