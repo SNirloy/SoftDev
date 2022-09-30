@@ -1,3 +1,14 @@
+"""
+Mahir Riki, Sadi Nirloy
+K05-krewes
+
+Disco:
+	-the list converter is not consistent for some reason.
+	-Appending to a list in a dictionary changes the dictionary as well.
+QCC:
+	-Why has list(dict.keys()) stopped working?
+"""
+
 import random
 
 with open('krewes.txt', 'r') as f:
