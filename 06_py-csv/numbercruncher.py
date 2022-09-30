@@ -21,8 +21,13 @@ list_of_all_text = reading.readlines()
 parsed_text = []
 for i in list_of_all_text:
     parsed_text.append(specialSplit(i))
-print(parsed_text)
+
 
 occupations = {}
-for i in parsed_text:
-    occupations[
+for i in range(len(parsed_text)):
+    job = parsed_text[i]
+    if (i == 0):
+        occupations[job[0]] = job[1]
+    else:
+        occupations[job[0]] = float(job[1])
+print (occupations)
