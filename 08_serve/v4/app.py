@@ -22,4 +22,8 @@ Discos:
 So, when the code is saved, the terminal prints a whole new set.
 Furthermore, changes in the return statement can be seen upon reload.
 We also saw that the printed statements are read as html, and not formatted from python. Ie) \n does not work. <br> was needed.
+<<<<<<< HEAD
 """
+=======
+"""
+>>>>>>> 4f7fb035e718d08d9243a815e326fb9d2fed379d

@@ -16,6 +16,7 @@ app.run()
 
 """
 The following statements appeared in the terminal before the printed statements:
+<<<<<<< HEAD
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 642-084-393
@@ -26,3 +27,20 @@ There are different line printed in thonny:
 /usr/bin/python3: No module named thonny.plugins.cpython.app
 I guess thonny is not capable of handling flask.DEBUG, at least on the default version.
 """
+=======
+
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 642-084-393
+
+This debugger pin is the same for everytime this is run.
+What is the significance of this?
+
+There are different line printed in thonny:
+
+ * Restarting with stat
+/usr/bin/python3: No module named thonny.plugins.cpython.app
+
+I guess thonny is not capable of handling flask.DEBUG, at least on the default version.
+"""
+>>>>>>> 4f7fb035e718d08d9243a815e326fb9d2fed379d
