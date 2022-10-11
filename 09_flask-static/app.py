@@ -2,10 +2,13 @@
 # SoftDev
 # Oct 2022
 
-from flask import Flask
-app = Flask(__name__) #create instance of class Flask
+# DEMO 
+# basics of /static folder
 
-@app.route("/")       #assign fxn to route
+from flask import Flask
+app = Flask(__name__) 
+
+@app.route("/")       
 def hello_world():
     print("the __name__ of this module is... ")
     print(__name__)
