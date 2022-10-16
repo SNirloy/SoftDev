@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 
+  Clyde 'Thluffy' Sinclair
+  SoftDev
+  Oct 2022
+
+     simple demo of HTML forms via Flask
+     
+     trioTASK:
+     If any member of team has forms experience, let their know-how OSMOTE.
+     If no one does, seek external assistance.
+     
+     PROTIP: Revisit code from intro if you have it.
+     Peruse this code together and discuss how it should work,
+       in conjunction with the back end apparatus.
+
+	<input type="submit"> creates the button
+		a name for the submit is not necessary
+	<input type="number"> creates a pair of buttons that allows to scroll through numbers
+ 		e is counted as a number
+	action= is the page the form sends you to.
+		The old information is still in the URL.
+ -->
+
+
+<html>
+
+  <head>
+    <title> LOGIN PAGE </title>
+  </head>
+
+  <body>
+    <h1>
+      Welcome, Travelers of the Intertoobz!
+    </h1>
+
+
+    <h3>
+      Enter your username below to proceed.
+    </h3>
+    <form action="/auth">
+      <input type="text" name="username">
+	<br>
+	<input type="number" name="Work?Yes">
+	<br>
+      <input type="submit">
+    </form>
+    <br>
+  </body>
+
+</html>
