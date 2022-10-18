@@ -56,7 +56,29 @@ def authenticate():
 
 @app.route("/response", methods=['POST'])
 def responding():
-	return "Help"
+	message = "<h1>Ah, so it is the famed "
+	message += request.form['username']
+	message += ".</h1><h3> It is a pleasure to meet thee. Truly, I am humbled" + \
+		" to be teaching one such as thyself.</h3>"
+	message += "If you must know, you entered via the post method. You " + \
+		"can tell by the URL above. One of the key differences between get and post is the difference is in the URL." + \
+		"<br> The get method will cause your inputs and their corresponding keys from request.args to be added to the URL. But make no mistake, this does not mean your information is more secure here. " + \
+		"A simple call to request.form will reveal the information that is not stored in request.args."
+	
+	message += "<br>The only other difference I may reveal to you now is in establishing a get form vs a post form." + \
+		"<ul> <li>When creating the form in HTML, the attribute method=\"post\" <strong> must </strong> be added to create a post form." + \
+		" Otherwise, that attribute is set to \"get\" as a default. method=\"get\" is allowed if you so desire.</li>"
+	message += "<li>When setting up your .routes() for your Flask object, " + \
+		"the receiving page of the information must be prepped. Since get is a default for the form, " + \
+		"it is also set to the default of the page. However, an additonal argument can be added to " + \
+		"decide the methods of input it should prepare for. <ul>"+ \
+		"<li><strong>methods=['GET']</strong> explictly states the default settings of a route.</li>" + \
+		"<li><strong>methods=['POST']</strong> prepares the route for the responses of a post form.</li>" + \
+		"<li><strong>methods=['GET', 'POST']</strong> allows for either kind of form method to be used. If the form types didn't match up. You'll receive a MethodNotFound Error.</li>"
+
+	message += "</ul>"
+	message += "</ul>"
+	return message
     
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
