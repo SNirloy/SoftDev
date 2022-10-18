@@ -54,6 +54,7 @@ def authenticate():
     print(request.headers)
     return "Waaaa hooo HAAAH"  #response to a form submission
 
+#The page for the new form
 @app.route("/response", methods=['POST'])
 def responding():
 	message = "<h1>Ah, so it is the famed "
