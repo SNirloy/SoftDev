@@ -1,4 +1,4 @@
-# Blinking Holly Fountains! - Ravindra Mangar, Gitae Park, Sam Cowan
+# Gastric Bypass Train - Sam Cowan, Anna Fang, Sadi Nirloy
 # K11: Form(s) Like Voltron
 # SoftDev
 # 14-10-22
