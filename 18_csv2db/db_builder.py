@@ -6,7 +6,7 @@ import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
 
 
-DB_FILE="discobandit.db"
+DB_FILE="discobandit"
 
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
@@ -29,8 +29,19 @@ with open ("students.csv") as csvfile:
 	#The column name is determined automatically here as the values of the first row
 	#     |
 	#     V
+	
 	reading = csv.DictReader(csvfile)
+	createCommand = "create table ree ("
 
+	counter = 0;
+	for col in reading.fieldnames:
+		createCommand += str(col) + " text"
+		if (counter < len(reading.fieldnames) - 1):
+			createCommand += ", "
+		counter += 1
+	createCommand += ");"
+	print (createCommand)
+	c.execute(createCommand)  
 	#Printing reading only returns an address, but I suspect that the reading variable stores a list of dictionaries 
 	#print(reading)
 
@@ -95,7 +106,7 @@ with open ("students.csv") as csvfile:
 	#I'll attempt the direct way afterwards
 	#Or we just ignore the dict? It may be easier. 
 	#We have an issue where all the string need a set of quotation marks, but we have no way of automating that, but do we have to?
-c.execute(command)    # run SQL statement
+  # run SQL statement
 
 #==========================================================
 
