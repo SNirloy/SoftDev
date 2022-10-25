@@ -1,0 +1,8 @@
+this hurrr some plaintext tho
+
+Q: What happens when you access this file
+     via
+      http://localhost:5000/static/foo 
+     ?
+A: The file is downloaded everytime the page is loaded. It still prints out a Not Found error. The url does not change after it is loaded.
+     
