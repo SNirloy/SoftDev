@@ -13,35 +13,17 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-studentDict = {}
-
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 #Open a file as csv
 
 
 #with open ("students.csv", newline=' ') as csvfile:
 #For some reason, the one above does not work, despite being recommended in the example of the documentation
-
-with open ("students.csv") as csvfile:
 	#Create a reading class, like BufferedReader or Scanner
 	#This reader is specialized in reading csvs into dicitonaries
 	#As the DictReader reads the csvfile, the file is read in rows where each index is the value at the column
 	#The column name is determined automatically here as the values of the first row
-	#     |
-	#     V
-	
-	reading = csv.DictReader(csvfile)
-	createCommand = "create table ree ("
-
-	counter = 0;
-	for col in reading.fieldnames:
-		createCommand += str(col) + " text"
-		if (counter < len(reading.fieldnames) - 1):
-			createCommand += ", "
-		counter += 1
-	createCommand += ");"
-	print (createCommand)
-	c.execute(createCommand)  
+ 
 	#Printing reading only returns an address, but I suspect that the reading variable stores a list of dictionaries 
 	#print(reading)
 
@@ -108,6 +90,24 @@ with open ("students.csv") as csvfile:
 	#We have an issue where all the string need a set of quotation marks, but we have no way of automating that, but do we have to?
   # run SQL statement
 
+with open ("students.csv") as csvfile:
+	reading = csv.DictReader(csvfile)
+	c.execute("create table if not exists students(name text, age int, id int);");
+	
+	for row in reading:
+		additionCommand = "insert into students values("
+		counter = 0;
+		for key in reading.fieldnames:
+			additionCommand += "\"" + str(row[key]) + "\""
+			if (counter < len(reading.fieldnames) - 1):
+				additionCommand += ", "
+			counter += 1
+		additionCommand += ");"
+		#print (additionCommand)
+		c.execute(additionCommand);
+
+	c.execute("select * from students")	
+	
 #==========================================================
 
 db.commit() #save changes
