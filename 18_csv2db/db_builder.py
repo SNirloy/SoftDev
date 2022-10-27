@@ -92,7 +92,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 with open ("students.csv") as csvfile:
 	reading = csv.DictReader(csvfile)
-	c.execute("create table if not exists students(name text, age int, id int);");
+	c.execute("create table if not exists students(name text, age int, id int not null primary key);");
 	
 	for row in reading:
 		additionCommand = "insert into students values("
@@ -107,7 +107,24 @@ with open ("students.csv") as csvfile:
 		c.execute(additionCommand);
 
 	c.execute("select * from students")	
-	
+
+with open ("courses.csv") as csvfile:
+        reading = csv.DictReader(csvfile)
+        c.execute("create table if not exists courses(code text not null, mark int, id int nit null, constraint pk_courses primary key (code, id));");
+
+        for row in reading:
+                additionCommand = "insert into courses values("
+                counter = 0;
+                for key in reading.fieldnames:
+                        additionCommand += "\"" + str(row[key]) + "\""
+                        if (counter < len(reading.fieldnames) - 1):
+                                additionCommand += ", "
+                        counter += 1
+                additionCommand += ");"
+                #print (additionCommand)
+                c.execute(additionCommand);
+
+        c.execute("select * from courses")	
 #==========================================================
 
 db.commit() #save changes
