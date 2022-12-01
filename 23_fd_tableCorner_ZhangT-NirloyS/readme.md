@@ -162,3 +162,63 @@
 </div>
 ```
 ### Forms 
+- You can use cells to size your text boxes and other form elements 
+	- The use of the label tag allows for text lined up to your textbox.
+	- All text inputs: text, date, datetime, datetime-local, email, month, number, password, search, tel, time, url, week
+- Number inputs: input type="number"
+- Multi-line text: textarea tag in the form
+- Select Menu: select tags create the dropdown menu and the option tag, with a value attribute, creates a choice
+```
+<select>
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+</select>
+```
+- 
+	- the multiple attribute for select displays all options at once and allows multi-choices with control or command clicks
+```
+<select multiple>
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+</select>
+```
+- The fieldset tag allows for multiple choice questions
+	- the legend tag defines the section
+	- input type radio allows for one choice 
+	- input type checkbox allows for multiple choices
+		- The site for foundation has a thing where it uses labels to an id in the input tag, which is nicely stylized. This is optional, but here
+```
+ <fieldset class="small-12 large-6 columns">
+      <legend>Check these out</legend>
+      <input id="checkbox1" type="checkbox"> 1
+      <input id="checkbox2" type="checkbox"> 2
+      <input id="checkbox3" type="checkbox"> 3
+    </fieldset>
+
+  <fieldset class="large-5 cell">
+    <legend>Choose Your Favorite</legend>
+    <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Red</label>
+    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+    <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+  </fieldset>
+
+```
+- input type file
+	- class="show-for-sr" supposedly masks the input
+```
+	<label for="exampleFileUpload" class="button">Upload File</label>
+	<input type="file" id="exampleFileUpload" class="show-for-sr">
+```
+- div class input-group
+	- includes a text label, input area for text, and a button of submission
+```
+<div class="input-group">
+  <span class="input-group-label">$</span>
+  <input class="input-group-field" type="number">
+  <div class="input-group-button">
+    <input type="submit" class="button" value="Submit">
+  </div>
+</div>
+```
