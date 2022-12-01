@@ -84,8 +84,8 @@
 	</div>
 ```
 - Spacing can be added to your rows and columns in two ways by putting the following in the class string
-	- grid-margin-<x or y> adds a space to {x: the left, y: the top} of the cell
-	- grid-padding-<x or y> adds spaces before and after the cell along that vector
+	- grid-margin-(x or y) adds a space to {x: the left, y: the top} of the cell
+	- grid-padding-(x or y) adds spaces before and after the cell along that vector
 		- These margins and paddings don't have to match the vector of the grid.
 ```	
 	<div class="grid-x grid-margin-x">
