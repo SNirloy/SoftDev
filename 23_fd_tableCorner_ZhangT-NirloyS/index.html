@@ -98,26 +98,55 @@
 				$(document).ready(function() { $(document).foundation();})
 			</script>
 	<h3>Questionable Gridding</h3>
-        <div class="grid-x grid-padding-x">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
-          <div class="grid-x grid-padding-y">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
-          <div class="grid-y grid-padding-y">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
-          <div class="grid-y grid-padding-x">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
+	<div class="grid-x">
+	  <div class="cell small-4">One-third of the row</div>
+	  <div class="cell small-8">The rest</div>
+	</div>
 
+	<div class="grid-y">
+	  <div class="cell small-4">Entire row</div>
+	  <div class="cell small-8">Next Row</div>
+	</div>
+	<div class="grid-x">
+	  <div class="cell small-2">
+	    <div class="grid-y">
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	    </div>
+	  </div>
+	  <div class="cell small-6">
+	    <div class="grid-y">
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	    </div>
+	  </div>
+	  <div class="cell small-4">
+	    <div class="grid-y">
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	    </div>
+	  </div>
+	</div>
      </body>
 </html>
