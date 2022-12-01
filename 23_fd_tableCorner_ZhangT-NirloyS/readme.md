@@ -23,7 +23,7 @@
 	  <div class="cell">Still on the next row</div>
 	</div>
 ```
-
+- 
 	- The cells in grid-x can be assigned a size to take up only part of the row. A full row has a size of 12 units.
 	- In the example, you'll see a word that describes size, like small, big, or medium. Not exactly sure what it does at this point. Just keep things to small for now.
 ```
@@ -37,7 +37,7 @@
 	  <div class="cell small-2">The next row</div>
 	</div>
 ```
-
+- 
 	- In the grid-y, you'll see how the cell still stretches across the entire row. Not exactly sure why it does that.
 - To make an actual grid: Make a grid-x that has grid-ys within the cells
 ```	
