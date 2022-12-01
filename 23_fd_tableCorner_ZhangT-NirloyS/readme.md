@@ -38,7 +38,19 @@
 	</div>
 ```
 - 
-	- In the grid-y, you'll see how the cell still stretches across the entire row. Not exactly sure why it does that.
+	- In the grid-y, you'll see how the cell still stretches across the entire row.
+	- You can add the height attribute to the style of the div with the grid class to stylize all of the cells. This allows you to change the vertical size.
+```
+	<div class="grid-x">
+	  <div class="cell big-4">One-third of the row</div>
+	  <div class="cell small-8">The rest</div>
+	</div>
+
+	<div class="grid-y" style="height: 300px;">
+	  <div class="cell small-4">Whole Row</div>
+	  <div class="cell small-2">The next row</div>
+	</div>
+```
 - To make an actual grid: Make a grid-x that has grid-ys within the cells
 ```	
 	<div class="grid-x">
@@ -130,3 +142,23 @@
 	  </div>
 	</div>
 ```
+- There is a "grid-container" class for divs that center your grid-x, set a max width, and have padding in the grid-container-padding. However, I am not sure how to change these values.
+```
+(Taken straight from site)
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-4">cell</div>
+    <div class="cell small-4">cell</div>
+    <div class="cell small-4">cell</div>
+  </div>
+</div>
+```
+- Cells of a grid-x can have left margins by using offsets in the class: <window size>-offset-num
+```
+(Also from site)
+<div class="grid-x grid-margin-x">
+  <div class="cell small-4 large-offset-2">Offset 2 on large</div>
+  <div class="cell small-4">4 cells</div>
+</div>
+```
+### Forms 
