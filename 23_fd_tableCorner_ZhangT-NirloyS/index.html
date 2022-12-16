@@ -9,29 +9,144 @@
 <html>
     <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
+    
     </head>
     <body>
-        <div class="grid-x grid-padding-x">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
-          <div class="grid-x grid-padding-y">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
-          <div class="grid-y grid-padding-y">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
-          <div class="grid-y grid-padding-y align-right">
-            <div class="cell small-4">Cell 1</div>
-            <div class="cell small-4">Cell 2</div>
-            <div class="cell small-4">Cell 3</div>
-          </div>
+	<h2>Table Corner (Sadi and Thomas) here to teach you the foundation of Foundation</h2>
+	Foundation was created to be optimal for websites for mobile browsers. Hence it has specialties in flexboxes and resizing/rescaling to window size.
+
+	<h3> The Menus of Foundation </h3>
+	<ul class="menu">
+		<li> The normal menu<br>a ul tag with the "menu" class</li>
+		<li>
+			<ul class="vertical menu" data-accordion-menu>
+				<li><a href="#"> The accordions</a>
+				  <ul class="menu vertical nested is-active">
+				    <li><a href="#">Basic Accordions</a>
+					<ul class="menu vertical nested">
+
+
+			<ul class="accordion" data-accordion role="tablist">
+				<li class="accordion-item is-active" data-accordion-item>
+				<a href="#collapse0" role="tab" class="accordion-title" id="collapse0-heading"> The requirements of an accordion table </a>
+				<div id="collapse0" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading" data-tab-content>
+					Needs Foundation Javascript
+				</div>
+				</li>
+				<li class="accordion-item is-active" data-accordion-item>
+				<a href="#collapse1" role="tab" class="accordion-title" id="collapse1-heading"> The structure of an accordion table </a>
+				<div id="collapse1" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading" data-tab-content>
+					<ul>
+					  <li>An ul with the "accordion" class</li>
+					  <li>data-accordion role="tablist" in opening tag</li>
+					  <li>The list element has class="accordion-item is-active" data-accordion-item in the opening tag.</li>
+					  <li>Link tag has a bunch of stuff:  href="#collapse0" role="tab" class="accordion-title" id="collapse0-heading".</li>
+					  <li>The link is followed by a div with id="collapse0" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading" data-tab-content.</li>
+					  <li>That number after collapse can be changed, but I do not know about the rest.</li>
+					  <li>Within that div is the stuff in the box, like this text.</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+
+					</ul>
+				    </li>
+				    <li><a href="#">Accordion Menus</a>
+					<ul class=menu vertical nested">
+					  <ul>
+						<li>Ul with "vertical menu" class and data-accordion-menu in opening tag.</li>
+						<li>List elements is a link to "#".</li>
+						<li>Elements have ul with class="menu vertical nested is-active".</li>
+						<li>The elements have two parts within </li>
+						<li>First, a link to "#" to nest accordions.</li>
+						<li>Second, a ul with class "menu vertical nested".</li>
+						<li>Inside these uls can be anything, from text to more accordions.</li>
+					  </ul>
+					</ul>
+				    </li>
+				  </ul>
+				</li>
+			</ul>
+		</li>
+		  <li>
+			<ul class="dropdown menu" data-dropdown-menu>
+			  <li>
+			    <a>Drop Down Menus</a>
+			      <ul class="menu">
+				<li><a href="#"> Single Layer </a>
+				  <ul class="menu">
+					<li><a href="#">Ul with class="dropdown menu" data-dropdown-menu in the opening tag</a></li>
+					<li><a href="#">An empty link to the name of the Menu</a></li>
+					<li><a href="#">A ul with the menu class holds all of the elements of the drop down. Using a href="#" will give the text this styling.</a></li>
+				  </ul>
+				</li>
+				<li><a href-"#"> Inception </a>
+				  	Any ul with the menu class inside of the dropdown menu class will have the potential to be a dropdown menu by putting another menu ul inside of it. Like above.
+				</li>
+			      </ul>
+			  </li>
+			</ul>
+		  </li>
+	</ul>
+
+			<script>
+				$(document).ready(function() { $(document).foundation();})
+			</script>
+	<h3>Questionable Gridding</h3>
+	<div class="grid-x">
+	  <div class="cell small-4">One-third of the row</div>
+	  <div class="cell small-8">The rest</div>
+	</div>
+
+	<div class="grid-y" style="height: 300px;">
+	  <div class="cell small-4">Whole Row</div>
+	  <div class="cell small-2">The next row</div>
+	</div>
+	<div class="grid-x grid-margin-x">
+	  <div class="cell small-2">
+	    <div class="grid-y grid-margin-y">
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	    </div>
+	  </div>
+	  <div class="cell small-6">
+	    <div class="grid-y grid-padding-y">
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	    </div>
+	  </div>
+	  <div class="cell small-4">
+	    <div class="grid-y grid-padding-x">
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	      <div class="cell">
+		X
+	      </div>
+	    </div>
+	  </div>
+	</div>
      </body>
 </html>
