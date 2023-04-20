@@ -79,27 +79,38 @@ var stripe = function() {
 
 //insert your implementations here for...
 // FIB
-function fib (n){
+var fib = function(n){
   if (n < 2){
       return n;
   }
   else{
       return fib(n - 1) + fib(n - 2);
   }
-}
+};
+
+var dasbut = document.getElementById("b"); 
+dasbut.addEventListener('click', ()=>{
+	console.log(fib(20));
+});
 
 // FAC
-function fact (n){
+var fact = function(n){
   if (n < 2){
       return 1;
   }
   else{
       return n * fact(n - 1);
   }
-}
+};
+
+var dasbut = document.getElementById("a"); 
+dasbut.addEventListener('click', ()=>{
+	console.log(fac(20));
+});
+
 
 // GCD
-function gcd (a,b){
+var gcd = function(a,b){
   if(a == 0){
     return b;
   }
@@ -118,6 +129,7 @@ const myFxn = (param1, param2) => { //it makes it act like a function without th
   // body
   retVal = param1+param2;
   return retVal;
-};
+}
+
 
 
