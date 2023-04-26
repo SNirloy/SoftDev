@@ -40,11 +40,13 @@ var drawDot = () => {
         growing = true;
     }
     requestID = window.requestAnimationFrame(drawDot);
-    console.log(radius);
+    dotButton.removeEventListener("click", drawDot); // I used this method to take away the power of the button to add layers of animation.
+    // I need to do this since this method needs to requestAnimationFrame itself at all times it is running, so I could not limit its access to that step.
 }
 
 var stopIt = () =>{
     window.cancelAnimationFrame(requestID);
+    dotButton.addEventListener("click", drawDot);
 }
 
 dotButton.addEventListener("click", drawDot);
