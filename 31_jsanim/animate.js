@@ -19,6 +19,7 @@ var growing = true;
 var smaller = Math.min(c.width, c.height);
 
 var drawDot = () => {
+    // window.cancelAnimationFrame(requestID); // to prevent the acceleration of animation
     clear();
     ctx.beginPath(); // A path is needed in order to isolate steps in coloring
     ctx.fillStyle = "black"; //circle color
